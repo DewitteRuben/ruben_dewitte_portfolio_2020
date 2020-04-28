@@ -1,3 +1,13 @@
+/* eslint-disable @typescript-eslint/interface-name-prefix */
+/* eslint-disable @typescript-eslint/no-empty-interface */
+
+import "styled-components";
+import { MyTheme } from "./src/styles/theme";
+
+declare module "styled-components" {
+  export interface DefaultTheme extends MyTheme {}
+}
+
 declare module "*.svg" {
   import React = require("react");
   export const ReactComponent: React.SFC<React.SVGProps<SVGSVGElement>>;
@@ -41,13 +51,4 @@ declare module "@mdx-js/react" {
     components: Components;
   }
   export class MDXProvider extends React.Component<IMDXProviderProps> {}
-}
-
-declare module "*.mdx" {
-  let MDXComponent: (props: any) => JSX.Element;
-  const frontMatter: any;
-  const tableOfContents: any;
-
-  export { frontMatter, tableOfContents };
-  export default MDXComponent;
 }

@@ -18,5 +18,5 @@
     "downlevelIteration": true,
     "noErrorTruncation": true
   },
-  "include": ["src", "custom.d.ts", "styled-components.d.ts"]
+  "include": ["src", "custom.d.ts", "styled-components.d.ts", "mdx.d.ts"]
 }
