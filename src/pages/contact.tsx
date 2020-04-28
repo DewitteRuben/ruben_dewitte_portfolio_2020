@@ -1,17 +1,16 @@
+import { em, rem } from "polished";
 import React from "react";
+import styled from "styled-components";
+import Icon from "../components/Icon/Icon";
 import {
+  BackgroundContainer,
+  Card,
   ContentContainer,
   PageTitle,
-  TextLink,
   Spacer,
   SpacerVertical,
   Subtitle,
-  BackgroundContainer,
-  Card,
 } from "../components/Layout";
-import styled from "styled-components";
-import { rem, em } from "polished";
-import Icon from "../components/Icon/Icon";
 
 const Input = styled.input`
   background-color: ${(props) => props.theme.backgroundColor};
@@ -159,13 +158,13 @@ const Contact = () => {
               <IconContainer>
                 <Icon name="mail" />
                 <SpacerVertical />
-                <TextLink href="mailto:ruben.dewitte@proximus.be">ruben.dewitte@proximus.be</TextLink>
+                <a href="mailto:ruben.dewitte@proximus.be">ruben.dewitte@proximus.be</a>
               </IconContainer>
               <Spacer />
               <IconContainer>
                 <Icon name="phone" />
                 <SpacerVertical />
-                <TextLink href="tel:+3247351307">+32 47 0351307</TextLink>
+                <a href="tel:+3247351307">+32 47 0351307</a>
               </IconContainer>
             </ContactContainer>
           </RowContainer>

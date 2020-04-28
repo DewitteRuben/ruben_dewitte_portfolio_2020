@@ -1,5 +1,5 @@
 import React from "react";
-import { ContentContainer, PageTitle, Spacer, TextLink, BackgroundContainer, Card } from "../components/Layout";
+import { ContentContainer, PageTitle, Spacer, BackgroundContainer, Card } from "../components/Layout";
 import styled from "styled-components";
 import { rem, em } from "polished";
 import { ReactComponent as AdagioLogo } from "../images/adagio.svg";
@@ -34,7 +34,7 @@ const DataList = styled.ul`
   list-style-type: none;
 `;
 
-const StyledLink = styled(TextLink)`
+const StyledLink = styled.a`
   font-size: ${rem(18)};
 `;
 
