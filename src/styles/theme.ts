@@ -1,9 +1,9 @@
 const themes = {
   primary: {
-    text: "#000000",
+    text: "#171717",
     backgroundColor: "#fafafa",
     backgroundHeader: "#E4E2E4",
-    border: "#CCCCCC",
+    border: "#cccccc",
     buttonColor: "#171717",
     buttonBackgroundColor: "#fafafa",
   },
