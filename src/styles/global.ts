@@ -1,7 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 import { rem } from "polished";
+import { normalize } from "./normalize";
 
 const GlobalStyles = createGlobalStyle`
+  ${normalize}
+
   :focus {
     box-shadow: none;
     outline: none;
