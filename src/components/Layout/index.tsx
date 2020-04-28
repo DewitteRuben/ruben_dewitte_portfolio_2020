@@ -1,5 +1,5 @@
+import { em } from "polished";
 import styled from "styled-components";
-import { rem, em } from "polished";
 
 const PageContainer = styled.div`
   display: flex;
@@ -57,25 +57,6 @@ const Image = styled.img`
   }
 `;
 
-const Paragraph = styled.p`
-  font-size: ${rem(20)};
-  font-weight: normal;
-`;
-
-const TextLink = styled.a`
-  color: ${(props) => props.theme.text};
-  font-size: ${rem(20)};
-  text-decoration: underline;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:visited {
-    color: ${(props) => props.theme.text};
-  }
-`;
-
 const Spacer = styled.span`
   display: inline-block;
   height: 16px;
@@ -119,8 +100,6 @@ export {
   NavLinkUL,
   PageTitle,
   Image,
-  Paragraph,
-  TextLink,
   Spacer,
   SpacerVertical,
   Subtitle,

@@ -9,4 +9,6 @@ const themes = {
   },
 };
 
+export type MyTheme = typeof themes.primary;
+
 export default themes;

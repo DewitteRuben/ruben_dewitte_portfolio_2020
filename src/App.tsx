@@ -9,6 +9,7 @@ import { PageContainer } from "./components/Layout";
 import Contact from "./pages/contact";
 import Experience from "./pages/experience";
 import Projects from "./pages/projects";
+import GlobalStyles from "./styles/global";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           </Switch>
           <Footer />
         </PageContainer>
+        <GlobalStyles />
       </ThemeProvider>
     </Router>
   );
