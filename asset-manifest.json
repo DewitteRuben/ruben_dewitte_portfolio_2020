@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/ruben_dewitte_portfolio_2020/static/js/main.13a75fa0.chunk.js",
-    "main.js.map": "/ruben_dewitte_portfolio_2020/static/js/main.13a75fa0.chunk.js.map",
+    "main.js": "/ruben_dewitte_portfolio_2020/static/js/main.681125da.chunk.js",
+    "main.js.map": "/ruben_dewitte_portfolio_2020/static/js/main.681125da.chunk.js.map",
     "runtime-main.js": "/ruben_dewitte_portfolio_2020/static/js/runtime-main.c364d118.js",
     "runtime-main.js.map": "/ruben_dewitte_portfolio_2020/static/js/runtime-main.c364d118.js.map",
     "static/css/2.fb73afcd.chunk.css": "/ruben_dewitte_portfolio_2020/static/css/2.fb73afcd.chunk.css",
-    "static/js/2.5b009e9e.chunk.js": "/ruben_dewitte_portfolio_2020/static/js/2.5b009e9e.chunk.js",
-    "static/js/2.5b009e9e.chunk.js.map": "/ruben_dewitte_portfolio_2020/static/js/2.5b009e9e.chunk.js.map",
+    "static/js/2.6774e151.chunk.js": "/ruben_dewitte_portfolio_2020/static/js/2.6774e151.chunk.js",
+    "static/js/2.6774e151.chunk.js.map": "/ruben_dewitte_portfolio_2020/static/js/2.6774e151.chunk.js.map",
     "index.html": "/ruben_dewitte_portfolio_2020/index.html",
-    "precache-manifest.4f5a3f3713f08e2fba51dde190c5afac.js": "/ruben_dewitte_portfolio_2020/precache-manifest.4f5a3f3713f08e2fba51dde190c5afac.js",
+    "precache-manifest.ae5c5659d23c8729f3b9d9972082d386.js": "/ruben_dewitte_portfolio_2020/precache-manifest.ae5c5659d23c8729f3b9d9972082d386.js",
     "service-worker.js": "/ruben_dewitte_portfolio_2020/service-worker.js",
     "static/css/2.fb73afcd.chunk.css.map": "/ruben_dewitte_portfolio_2020/static/css/2.fb73afcd.chunk.css.map",
-    "static/js/2.5b009e9e.chunk.js.LICENSE.txt": "/ruben_dewitte_portfolio_2020/static/js/2.5b009e9e.chunk.js.LICENSE.txt",
+    "static/js/2.6774e151.chunk.js.LICENSE.txt": "/ruben_dewitte_portfolio_2020/static/js/2.6774e151.chunk.js.LICENSE.txt",
     "static/media/index.css": "/ruben_dewitte_portfolio_2020/static/media/CircularStd-MediumItalic.fde448ff.svg",
     "static/media/adagio.d1658c62.svg": "/ruben_dewitte_portfolio_2020/static/media/adagio.d1658c62.svg",
     "static/media/decoworld-1.png": "/ruben_dewitte_portfolio_2020/static/media/decoworld-1.f1ab5eed.png",
@@ -43,7 +43,7 @@
   "entrypoints": [
     "static/js/runtime-main.c364d118.js",
     "static/css/2.fb73afcd.chunk.css",
-    "static/js/2.5b009e9e.chunk.js",
-    "static/js/main.13a75fa0.chunk.js"
+    "static/js/2.6774e151.chunk.js",
+    "static/js/main.681125da.chunk.js"
   ]
 }

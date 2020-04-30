@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1b2fcd85a5136cb37945d95606af563a",
+    "revision": "147adeec322800a0711f632e0b819db0",
     "url": "/ruben_dewitte_portfolio_2020/index.html"
   },
   {
-    "revision": "950c91b917c1eff5df9f",
+    "revision": "6795cb26dd743b5c887a",
     "url": "/ruben_dewitte_portfolio_2020/static/css/2.fb73afcd.chunk.css"
   },
   {
-    "revision": "950c91b917c1eff5df9f",
-    "url": "/ruben_dewitte_portfolio_2020/static/js/2.5b009e9e.chunk.js"
+    "revision": "6795cb26dd743b5c887a",
+    "url": "/ruben_dewitte_portfolio_2020/static/js/2.6774e151.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/ruben_dewitte_portfolio_2020/static/js/2.5b009e9e.chunk.js.LICENSE.txt"
+    "url": "/ruben_dewitte_portfolio_2020/static/js/2.6774e151.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f4341377aa44bf945591",
-    "url": "/ruben_dewitte_portfolio_2020/static/js/main.13a75fa0.chunk.js"
+    "revision": "ec6aebb85173334bd71c",
+    "url": "/ruben_dewitte_portfolio_2020/static/js/main.681125da.chunk.js"
   },
   {
     "revision": "81e7b9dca68cbc1dcdae",
