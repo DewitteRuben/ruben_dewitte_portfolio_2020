@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "16d380803268d854be213a7ad4ed3128",
+    "revision": "1b2fcd85a5136cb37945d95606af563a",
     "url": "/ruben_dewitte_portfolio_2020/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ruben_dewitte_portfolio_2020/static/js/2.5b009e9e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "24b4fd09688c2c103988",
-    "url": "/ruben_dewitte_portfolio_2020/static/js/main.556e841d.chunk.js"
+    "revision": "f4341377aa44bf945591",
+    "url": "/ruben_dewitte_portfolio_2020/static/js/main.13a75fa0.chunk.js"
   },
   {
     "revision": "81e7b9dca68cbc1dcdae",
