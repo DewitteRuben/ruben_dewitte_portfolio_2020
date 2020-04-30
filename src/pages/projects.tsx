@@ -47,6 +47,10 @@ const ProjectItemImage = styled.div<IProjectItemContainerProps>`
   }
 `;
 
+const ProjectPageContainer = styled.div`
+  position: relative;
+`;
+
 const ProjectItemTitle = styled.span`
   position: absolute;
   text-shadow: 2px 2px 1px #fff;
@@ -86,8 +90,8 @@ const Projects: React.FC = () => {
   return (
     <BackgroundContainer>
       <ContentContainer>
-        <PageTitle>Projects</PageTitle>
         <Route path={match.url} exact>
+          <PageTitle>Projects</PageTitle>
           {projects.map(({ component, frontMatter }) => (
             <ProjectItem
               key={frontMatter.route}
@@ -97,13 +101,15 @@ const Projects: React.FC = () => {
             />
           ))}
         </Route>
-        {projects.map(({ component, frontMatter }) => (
-          <Route
-            key={`${match.url}/${frontMatter.route}`}
-            path={`${match.url}/${frontMatter.route}`}
-            component={component}
-          />
-        ))}
+        <ProjectPageContainer>
+          {projects.map(({ component, frontMatter }) => (
+            <Route
+              key={`${match.url}/${frontMatter.route}`}
+              path={`${match.url}/${frontMatter.route}`}
+              component={component}
+            />
+          ))}
+        </ProjectPageContainer>
       </ContentContainer>
     </BackgroundContainer>
   );
