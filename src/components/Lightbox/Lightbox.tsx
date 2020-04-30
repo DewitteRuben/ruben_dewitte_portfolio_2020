@@ -222,7 +222,6 @@ const Lightbox: React.FC<ILightboxProps> = ({
     setIsHidden(!visible);
   }, [visible]);
 
-  console.log(width);
   return (
     <>
       {showThumb && <LightboxThumbnail width={width} src={thumb || src} onClick={handleOnThumbnailClick} />}
