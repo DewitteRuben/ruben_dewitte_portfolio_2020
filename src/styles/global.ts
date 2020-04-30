@@ -39,12 +39,7 @@ const GlobalStyles = createGlobalStyle`
  ul li {
    font-size: ${rem(18)};
  }
-
- figure {
-   margin-left: 10px;
-   display: inline-block;
- }
-
+ 
  a {
     color: ${(props) => props.theme.text};
   font-size: ${rem(20)};

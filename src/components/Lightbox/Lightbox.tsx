@@ -2,8 +2,12 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { em, rem } from "polished";
 
-export const LightboxThumbnail = styled.img`
-  max-width: 300px;
+interface ILightboxThumbnailProps {
+  width?: number;
+}
+
+export const LightboxThumbnail = styled.img<ILightboxThumbnailProps>`
+  max-width: ${(props) => em(props.width ? props.width : 300)};
   width: 100%;
   border: 1px solid ${(props) => props.theme.border};
 
@@ -66,6 +70,7 @@ interface ILightboxProps {
   thumb?: string;
   visible?: boolean;
   showThumb?: boolean;
+  width?: number;
 }
 
 const Arrow = css`
@@ -128,6 +133,7 @@ const Lightbox: React.FC<ILightboxProps> = ({
   onClose,
   thumb,
   visible,
+  width,
   showThumb = true,
 }) => {
   const [hidden, setIsHidden] = React.useState(true);
@@ -216,9 +222,10 @@ const Lightbox: React.FC<ILightboxProps> = ({
     setIsHidden(!visible);
   }, [visible]);
 
+  console.log(width);
   return (
     <>
-      {showThumb && <LightboxThumbnail src={thumb || src} onClick={handleOnThumbnailClick} />}
+      {showThumb && <LightboxThumbnail width={width} src={thumb || src} onClick={handleOnThumbnailClick} />}
       <LightboxBackdrop hide={hidden}>
         <LightboxContainer>
           {arrowLeft && <ArrowLeft onClick={onArrowLeft}>&lt;</ArrowLeft>}

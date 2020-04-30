@@ -5,6 +5,7 @@ import { em } from "polished";
 
 interface ILightboxCarouselProps {
   images: string[];
+  width?: number;
 }
 
 const LightboxCarouselContainer = styled.div`
@@ -13,7 +14,7 @@ const LightboxCarouselContainer = styled.div`
   grid-gap: ${em(10)};
 `;
 
-const LightboxCarousel: React.FC<ILightboxCarouselProps> = ({ images }) => {
+const LightboxCarousel: React.FC<ILightboxCarouselProps> = ({ images, width }) => {
   const [currentIndex, setIndex] = React.useState(0);
   const [isVisible, setVisibility] = React.useState(false);
 
@@ -62,7 +63,7 @@ const LightboxCarousel: React.FC<ILightboxCarouselProps> = ({ images }) => {
   return (
     <LightboxCarouselContainer>
       {images.map((src: string, index: number) => (
-        <LightboxThumbnail onClick={onThumbClick(index)} key={src} src={src} />
+        <LightboxThumbnail width={width} onClick={onThumbClick(index)} key={src} src={src} />
       ))}
       <Lightbox
         onClose={onLightboxClose}
