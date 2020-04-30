@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rem, em } from "polished";
 import React from "react";
 import Link from "../Link/Link";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { NavLinkUL } from "../Layout";
 import Icon from "../Icon/Icon";
 import useClickOutside from "../../hooks/useClickOutside";
