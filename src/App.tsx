@@ -13,7 +13,7 @@ import GlobalStyles from "./styles/global";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={themes.primary}>
         <PageContainer>
           <Header />
