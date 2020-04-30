@@ -34,7 +34,15 @@ const GlobalStyles = createGlobalStyle`
 
  p {
   font-size: ${rem(20)};
-  font-weight: normal;
+ }
+
+ ul li {
+   font-size: ${rem(18)};
+ }
+
+ figure {
+   margin-left: 10px;
+   display: inline-block;
  }
 
  a {
