@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ruben_dewitte_portfolio_2020/precache-manifest.95961afb1900ade751c06bdb97acaea7.js"
+  "/ruben_dewitte_portfolio_2020/precache-manifest.8435cee98f1c857d6c7f17376260c684.js"
 );
 
 self.addEventListener('message', (event) => {
