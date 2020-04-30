@@ -1,10 +1,108 @@
 ---
 title: Decoration marketplace
 route: deco-webapp
-thumb: https://imgur.com/1H9lP0i.png
+thumb: https://i.imgur.com/1H9lP0i.png
 ---
 
-As a hobby project I decided to create an online marketplace, where users can sell their own items. 
-The theme of such marketplaces are usually general items or clothes (Vinted, Ebay,...),
-however I wanted to create something where users can sell everything related to decoration. 
+import decoworldHomePageDesign from "../images/projects/deco-webapp/design/decoworld-home-page-design.png";
+import decoworldLoginPageDesign from "../images/projects/deco-webapp/design/decoworld-login-page-design.png";
+
+import navGif from "../images/projects/deco-webapp/gifs/nav.gif";
+import skeletonLoadingGif from "../images/projects/deco-webapp/gifs/skeleton-loading.gif";
+import sortAndFilterGif from "../images/projects/deco-webapp/gifs/sort-and-filter.gif";
+import treeSelectGif from "../images/projects/deco-webapp/gifs/treeselect.gif";
+import wishlistActionGif from "../images/projects/deco-webapp/gifs/wishlist-action.gif"
+
+import decoworld1 from "../images/projects/deco-webapp/result/decoworld-1.png"
+import decoworld2 from "../images/projects/deco-webapp/result/decoworld-2.png"
+import decoworld3 from "../images/projects/deco-webapp/result/decoworld-3.png"
+import decoworld4 from "../images/projects/deco-webapp/result/decoworld-4.png"
+import decoworld5 from "../images/projects/deco-webapp/result/decoworld-5.png"
+import decoworld6 from "../images/projects/deco-webapp/result/decoworld-6.png"
+import decoworld7 from "../images/projects/deco-webapp/result/decoworld-7.png"
+import decoworld8 from "../images/projects/deco-webapp/result/decoworld-8.png"
+import decoworld9 from "../images/projects/deco-webapp/result/decoworld-9.png"
+
+import { MarkdownImage, Small, MarkdownGif } from "../components/Layout/index";
+import Lightbox from "../components/Lightbox/Lightbox";
+import LightboxCarousel from "../components/LightboxCarousel/LightboxCarousel";
+
+import ViewOnGithub from "../components/ViewOnGithub/ViewOnGithub";
+
+<ViewOnGithub href="https://google.com"/>
+
+# Decoration marketplace
+
+## Introduction
+
+There are many online marketplaces currently out there: Amazon, eBay, Google Express, etc.
+Many of these marketplaces sell a wide variety of items, there are some who target a more specific audience.
+
+For example, Etsy, it is an e-commerce focused on handmade or vintage items and craft supplies.
+Other than Etsy there is Vinted, an e-commerce that focusses on selling (and swapping) of clothes and accessoires.
+
+I had the idea to target another nieche audience. Inspired by the german retail store 'Depot' that sells mostly decoration-related articles,
+I wanted to create a proof of concept of an online marketplace where people can buy and sell decoration-related goods.
+
+*<Small>The main goal of this project was to challenge myself and to showcase my skillset</Small>*
+
+<br/>
+
+## Development
+
+### Scope
+* Items divided by category, subcategory, etc.
+    * Categories accessible by URL, e.g.: /decoration/vases-and-flowers/wreath/flowers
+* Ability to sort / filter items (by price, popularity and date)
+* User accounts (Login, registration)
+    * Ability to view edit and delete your own profile 
+    * Ability to view other profiles
+* Ability to add, edit, remove items 
+* Shopping cart / Wishlist
+* Paypal implementation
+
+### Design
+
+I chose to go with a minimalistic approach as an online webshop/marketplace should be clear and simple in use.<br/>Design was made using <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">Figma</a>.
+<figure>
+    <MarkdownImage src={decoworldHomePageDesign} />
+</figure>
+<figure>
+    <MarkdownImage src={decoworldLoginPageDesign} />
+</figure>
+
+
+### Tech stack 
+This project was made from scratch using the following tech stack:
+- <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React.js</a> with <a href="https://mobx.js.org/README.html" target="_blank" rel="noopener noreferrer">MobX</a> (state management) and styling with <a href="https://styled-components.com/" target="_blank" rel="noopener noreferrer">Styled Components</a>
+- <a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer">MongoDb</a> with <a href="https://mongoosejs.com/" target="_blank" rel="noopener noreferrer">Mongoose</a> on top
+- Authentication, Authorization and Cloud storage with <a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase</a>
+- <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">Typescript</a> for both front and back-end
+
+The source code can be viewed on <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">Github</a>
+
+<br/>
+
+## Showcase
+
+### Gallery
+<LightboxCarousel images={[decoworld1, decoworld2, decoworld3, decoworld4, decoworld5, decoworld6, decoworld7, decoworld8, decoworld9]} />
+
+
+### Functionality
+
+Navigation:
+<MarkdownGif src={navGif} alt="navigation showcase" />
+
+Skeleton loading:
+<MarkdownGif src={skeletonLoadingGif} alt="skeleton loading" />
+
+Sort and filtering:
+<MarkdownGif src={sortAndFilterGif} alt="sort and filter" />
+
+Category selection (Tree select):
+<MarkdownGif src={treeSelectGif} alt="tree select" />
+
+Wishlisting an item:
+<MarkdownGif src={wishlistActionGif} alt="wishlist action" />
 

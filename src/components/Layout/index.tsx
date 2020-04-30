@@ -45,6 +45,24 @@ const PageTitle = styled.h2`
   font-weight: 600;
 `;
 
+const MarkdownImage = styled.img`
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.6s ease-in-out;
+`;
+
+const MarkdownGif = styled.img`
+  display: block;
+  margin: 0 auto;
+
+  max-width: 600px;
+
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
+`;
+
 const Image = styled.img`
   display: block;
   margin: 0 auto 20px auto;
@@ -55,6 +73,10 @@ const Image = styled.img`
   @media screen and (max-width: 600px) {
     height: auto;
   }
+`;
+
+const Small = styled.span`
+  font-size: 75%;
 `;
 
 const Spacer = styled.span`
@@ -105,4 +127,7 @@ export {
   Subtitle,
   BackgroundContainer,
   Card,
+  MarkdownImage,
+  Small,
+  MarkdownGif,
 };
