@@ -12,4 +12,14 @@ const Link = styled.a`
   }
 `;
 
+export const IconLink = styled.a`
+  font-size: ${rem(24)};
+  color: ${(props) => props.theme.text};
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
 export default Link;
