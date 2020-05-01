@@ -36,8 +36,8 @@ const ForwardedIcon = React.forwardRef(({ name, ...props }: CombinedProps, ref: 
 ForwardedIcon.displayName = "Icon";
 
 const Icon = styled(ForwardedIcon)<IStyledIconProps>`
-  width: ${(props) => props.size || 28}px;
-  height: ${(props) => props.size || 28}px;
+  min-width: ${(props) => props.size || 28}px;
+  min-height: ${(props) => props.size || 28}px;
 `;
 
 export default Icon;

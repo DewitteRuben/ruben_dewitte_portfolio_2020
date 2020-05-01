@@ -81,13 +81,13 @@ const Small = styled.span`
 
 const Spacer = styled.span`
   display: inline-block;
-  height: 16px;
+  min-height: 16px;
 `;
 
 const SpacerVertical = styled.span`
   display: inline-block;
   height: 100%;
-  width: 16px;
+  min-width: 16px;
 `;
 
 const Subtitle = styled.h2`
