@@ -161,7 +161,7 @@ const Lightbox: React.FC<ILightboxProps> = ({
       }, 500);
     }
 
-    if ((swipe == "left" && !arrowRight) || (swipe == "right" && !arrowLeft)) {
+    if ((swipe === "left" && !arrowRight) || (swipe === "right" && !arrowLeft)) {
       setXOffset(0);
     }
 
