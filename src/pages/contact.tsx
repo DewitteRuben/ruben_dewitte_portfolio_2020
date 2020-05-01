@@ -111,7 +111,14 @@ const ContactContainer = styled.aside`
   @media screen and (max-width: 800px) {
     width: 100%;
   }
-  word-break: break-all;
+`;
+
+const LineBreak = styled.br`
+  display: none;
+
+  @media screen and (max-width: 386px) {
+    display: block;
+  }
 `;
 
 const ContactCard = styled(Card)`
@@ -158,7 +165,11 @@ const Contact = () => {
               <IconContainer>
                 <Icon name="mail" />
                 <SpacerVertical />
-                <a href="mailto:ruben.dewitte@proximus.be">ruben.dewitte@proximus.be</a>
+                <a href="mailto:ruben.dewitte@proximus.be">
+                  ruben.dewitte
+                  <LineBreak />
+                  @proximus.be
+                </a>
               </IconContainer>
               <Spacer />
               <IconContainer>
