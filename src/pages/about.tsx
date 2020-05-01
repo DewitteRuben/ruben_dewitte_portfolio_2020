@@ -45,7 +45,7 @@ const About: React.FC = () => {
             </p>
             <p>
               In 2019 at the University of West-Flanders{" "}
-              <a href="https://www.howest.be/en" target="_blank">
+              <a href="https://www.howest.be/en" rel="noopener noreferrer" target="_blank">
                 Howest
               </a>{" "}
               (Belgium) I obtained my Bachelor&apos;s degree. Other than my degree I currently have one year of professional
