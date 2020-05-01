@@ -7,12 +7,9 @@ import { Route, useRouteMatch, useHistory } from "react-router-dom";
 /* eslint import/no-webpack-loader-syntax: off */
 /* eslint-disable import/no-unresolved */
 import Decoworld, { frontMatter as decoFrontMatter } from "!babel-loader!mdx-loader!../projects/decoapp.mdx";
-import Gpsapp, { frontMatter as gpsFrontMatter } from "!babel-loader!mdx-loader!../projects/gpsapp.mdx";
+import ViewOnGithub from "../components/ViewOnGithub/ViewOnGithub";
 
-const projects = [
-  { component: Decoworld, frontMatter: decoFrontMatter },
-  { component: Gpsapp, frontMatter: gpsFrontMatter },
-];
+const projects = [{ Component: Decoworld, frontMatter: decoFrontMatter }];
 
 interface IProjectItemContainerProps {
   bgURL?: string;
@@ -92,7 +89,7 @@ const Projects: React.FC = () => {
       <ContentContainer>
         <Route path={match.url} exact>
           <PageTitle>Projects</PageTitle>
-          {projects.map(({ component, frontMatter }) => (
+          {projects.map(({ frontMatter }) => (
             <ProjectItem
               key={frontMatter.route}
               route={`${match.url}/${frontMatter.route}`}
@@ -102,12 +99,11 @@ const Projects: React.FC = () => {
           ))}
         </Route>
         <ProjectPageContainer>
-          {projects.map(({ component, frontMatter }) => (
-            <Route
-              key={`${match.url}/${frontMatter.route}`}
-              path={`${match.url}/${frontMatter.route}`}
-              component={component}
-            />
+          {projects.map(({ Component, frontMatter }) => (
+            <Route key={`${match.url}/${frontMatter.route}`} path={`${match.url}/${frontMatter.route}`}>
+              {frontMatter.repo && <ViewOnGithub href={frontMatter.repo} />}
+              <Component />
+            </Route>
           ))}
         </ProjectPageContainer>
       </ContentContainer>
