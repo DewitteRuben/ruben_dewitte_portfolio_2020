@@ -34,7 +34,7 @@ const HeaderContainer = styled.div`
   box-sizing: border-box;
   border-bottom: 1px solid ${(props) => props.theme.backgroundHeader};
 
-  @media screen and (max-width: 415px) {
+  @media screen and (max-width: 406px) {
     padding: ${em(10)} ${em(50)};
   }
 `;
