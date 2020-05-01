@@ -37,7 +37,7 @@ const Footer = () => {
             </FooterLink>
           </li>
           <li>
-            <FooterLink href="https://www.xing.com/home" target="_blank">
+            <FooterLink href="https://www.xing.com/profile/Ruben_Dewitte/cv" target="_blank">
               Xing
             </FooterLink>
           </li>
