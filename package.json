@@ -22,10 +22,10 @@
     "styled-components": "^5.1.0",
     "typescript": "^3.8.3"
   },
-  "homepage": "https://dewitteruben.github.io/ruben_dewitte_portfolio_2020/",
+  "homepage": "https://www.rubendewitte.com/",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp ./404.html ./build/ && cp ./CNAME ./build/",
     "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
