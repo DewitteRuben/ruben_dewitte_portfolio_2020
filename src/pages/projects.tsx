@@ -55,7 +55,7 @@ const ProjectItemTitle = styled.span`
   position: absolute;
   text-shadow: 2px 2px 1px #fff;
   top: 45%;
-  left: 60px;
+  left: 5.5%;
   z-index: 2;
 
   font-size: ${rem(38)};
