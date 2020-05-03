@@ -6,8 +6,9 @@ import { ReactComponent as GithubIcon } from "../../icons/github.svg";
 import { ReactComponent as LinkedInIcon } from "../../icons/linkedin.svg";
 import { ReactComponent as XingIcon } from "../../icons/xing.svg";
 import { ReactComponent as MenuIcon } from "../../icons/menu.svg";
+import { ReactComponent as BackIcon } from "../../icons/back.svg";
 
-export type IconTypes = "mail" | "phone" | "github" | "xing" | "linkedin" | "menu";
+export type IconTypes = "mail" | "phone" | "github" | "xing" | "linkedin" | "menu" | "back";
 
 const iconMap: Record<IconTypes, FunctionComponent<SVGProps<SVGSVGElement>>> = {
   mail: MailIcon,
@@ -16,6 +17,7 @@ const iconMap: Record<IconTypes, FunctionComponent<SVGProps<SVGSVGElement>>> = {
   xing: XingIcon,
   linkedin: LinkedInIcon,
   menu: MenuIcon,
+  back: BackIcon,
 };
 
 interface IProps {
