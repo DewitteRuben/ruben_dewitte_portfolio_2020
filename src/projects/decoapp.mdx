@@ -44,13 +44,9 @@ Other than Etsy there is Vinted, an e-commerce that focusses on selling (and swa
 I had the idea to target another nieche audience. Inspired by the german retail store 'Depot' that sells mostly decoration-related articles,
 I wanted to create a proof of concept of an online marketplace where people can buy and sell decoration-related goods.
 
-*<Small>The main goal of this project was to challenge myself and to showcase my skillset</Small>*
+## Scope
+The scope of this project is defined as follows: 
 
-<br/>
-
-## Development
-
-### Scope
 * Items divided by category, subcategory, etc.
     * Categories accessible by URL, e.g.: /decoration/vases-and-flowers/wreath/flowers
 * Ability to sort / filter items (by price, popularity and date)
@@ -61,22 +57,18 @@ I wanted to create a proof of concept of an online marketplace where people can 
 * Shopping cart / Wishlist
 * Paypal implementation
 
-### Design
+## Design
 
 I chose to go with a minimalistic approach as an online webshop/marketplace should be clear and simple in use. <br/> Design was made using <MdLink href="https://www.figma.com/">Figma</MdLink>.
 
 <LightboxCarousel width={600} images={[decoworldHomePageDesign, decoworldLoginPageDesign]} />
 
-### Tech stack 
+## Tech stack 
 This project was made from scratch using the following tech stack:
 - <MdLink href="https://reactjs.org/">React.js</MdLink> with <MdLink href="https://mobx.js.org/README.html">MobX</MdLink> (state management) and styling with <MdLink href="https://styled-components.com/">Styled Components</MdLink>
 - <MdLink href="https://www.mongodb.com/">MongoDb</MdLink> with <MdLink href="https://mongoosejs.com/">Mongoose</MdLink> on top
 - Authentication, Authorization and Cloud storage with <MdLink href="https://firebase.google.com/">Firebase</MdLink>
 - <MdLink href="https://www.typescriptlang.org/">Typescript</MdLink> for both front and back-end
-
-The source code can be viewed on <MdLink href={frontMatter.repo}>Github</MdLink>
-
-<br/>
 
 ## Showcase
 
@@ -100,4 +92,8 @@ Category selection (Tree select):
 
 Wishlisting an item:
 <MarkdownGif src={wishlistActionGif} alt="wishlist action" />
+
+## Release
+
+The source code for both front and backend of this project can be found <MdLink href={frontMatter.repo}>here</MdLink>.
 
