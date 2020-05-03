@@ -39,7 +39,7 @@ const ProjectItemImage = styled.div<IProjectItemContainerProps>`
   background-repeat: no-repeat;
   background-size: auto 212%;
   background-position-x: center;
-  background-position-y: ${(props) => (props.yPos ? props.yPos : em(55))}};
+  background-position-y: ${(props) => (props.yPos ? props.yPos : "unset")}};
   
   &:hover {
     cursor: pointer;
