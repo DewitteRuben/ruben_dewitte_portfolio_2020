@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "821c20cba7f9c39591700ec4f3d9147d",
+    "revision": "4aa948553520391ab24cba2360210386",
     "url": "/index.html"
   },
   {
-    "revision": "373a5e9e9a4fabfafdf6",
+    "revision": "4309e43a9100019a9ee2",
     "url": "/static/css/2.a5bbd098.chunk.css"
   },
   {
-    "revision": "373a5e9e9a4fabfafdf6",
-    "url": "/static/js/2.0f09126d.chunk.js"
+    "revision": "4309e43a9100019a9ee2",
+    "url": "/static/js/2.e9ea5931.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/static/js/2.0f09126d.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.e9ea5931.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3e045818d72f4ed91672",
-    "url": "/static/js/main.0a10ecb8.chunk.js"
+    "revision": "11e422a04142268a3364",
+    "url": "/static/js/main.d489c130.chunk.js"
   },
   {
     "revision": "30ef98ccc078dcdc8699",
@@ -156,6 +156,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/adagio.d1658c62.svg"
   },
   {
+    "revision": "912f96bfa7bfb2a12a5147c6a91513dc",
+    "url": "/static/media/back.912f96bf.svg"
+  },
+  {
     "revision": "f1ab5eed23ed40dc8c4d2797747461ab",
     "url": "/static/media/decoworld-1.f1ab5eed.png"
   },
@@ -204,6 +208,38 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/github.86f5ed67.svg"
   },
   {
+    "revision": "3b9ca537953f37b136b7d966b0c2a476",
+    "url": "/static/media/gpsapp-conclude-route.3b9ca537.jpg"
+  },
+  {
+    "revision": "8f328b77488d640bea9f53417f3ef818",
+    "url": "/static/media/gpsapp-connection-request.8f328b77.jpg"
+  },
+  {
+    "revision": "cd35d0ffd4efba89b375d304674b1246",
+    "url": "/static/media/gpsapp-edit-route.cd35d0ff.jpg"
+  },
+  {
+    "revision": "999b0871a4ee0f973a5b35a753d78b93",
+    "url": "/static/media/gpsapp-save-route.999b0871.jpg"
+  },
+  {
+    "revision": "a7196d9e52ce020146264b320fe9b6d4",
+    "url": "/static/media/gpsapp-saved-routes.a7196d9e.jpg"
+  },
+  {
+    "revision": "76acdface15b8e2877fa10d63365f597",
+    "url": "/static/media/gpsapp-settings-webrtc.76acdfac.jpg"
+  },
+  {
+    "revision": "b608904434703554666a6463dd8ddda2",
+    "url": "/static/media/gpsapp-settings.b6089044.jpg"
+  },
+  {
+    "revision": "a0222388f88a9e661c23018b739bbedf",
+    "url": "/static/media/gpsapp-view-route.a0222388.jpg"
+  },
+  {
     "revision": "d236e4506658e21e0dce1bb9dabbda45",
     "url": "/static/media/howest.d236e450.png"
   },
@@ -246,6 +282,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "62bcc4aa7b85db6ddf777bbd22553524",
     "url": "/static/media/treeselect.62bcc4aa.gif"
+  },
+  {
+    "revision": "08d1ed8fc95a783df0cd34a9996e17c7",
+    "url": "/static/media/webapp-peer-to-peer-call.08d1ed8f.png"
+  },
+  {
+    "revision": "c66e6d5ff233c67b8790b96a99950385",
+    "url": "/static/media/webapp-start-track.c66e6d5f.png"
+  },
+  {
+    "revision": "2173e980f0001a3f8ec0e1bddc7a7244",
+    "url": "/static/media/webapp-track-example.2173e980.png"
   },
   {
     "revision": "8cbfb81a2aec280b4528a91d4fff7e36",
