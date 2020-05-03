@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { rem, em } from "polished";
 import React from "react";
 import Link from "../Link/Link";
@@ -43,6 +43,10 @@ interface IResponsiveNavLinkULProps {
   visible?: boolean;
 }
 
+const DisablePointerEvents = css`
+  pointer-events: none;
+`;
+
 const ResponsiveNavLinkUL = styled(NavLinkUL)<IResponsiveNavLinkULProps>`
   width: 450px;
   transition: opacity 0.2s linear;
@@ -63,6 +67,7 @@ const ResponsiveNavLinkUL = styled(NavLinkUL)<IResponsiveNavLinkULProps>`
     background-color: ${(props) => props.theme.backgroundColor};
     border-top: 1px solid ${(props) => props.theme.backgroundHeader};
     opacity: ${(props) => (props.visible ? "1" : "0")};
+    ${(props) => !props.visible && DisablePointerEvents};
 
     display: flex;
     flex-direction: column;
