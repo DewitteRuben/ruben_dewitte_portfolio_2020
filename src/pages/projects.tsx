@@ -9,6 +9,7 @@ import { Route, useRouteMatch, useHistory } from "react-router-dom";
 import Decoworld, { frontMatter as decoFrontMatter } from "!babel-loader!mdx-loader!../projects/decoapp.mdx";
 import GpsApp, { frontMatter as gpsFrontMatter } from "!babel-loader!mdx-loader!../projects/gpsapp.mdx";
 import ViewOnGithub from "../components/ViewOnGithub/ViewOnGithub";
+import GoBack from "../components/GoBack/GoBack";
 
 const projects = [
   { Component: Decoworld, frontMatter: decoFrontMatter },
@@ -108,8 +109,10 @@ const Projects: React.FC = () => {
         <ProjectPageContainer>
           {projects.map(({ Component, frontMatter }) => (
             <Route key={`${match.url}/${frontMatter.route}`} path={`${match.url}/${frontMatter.route}`}>
+              <GoBack text="Back to projects" />
               {frontMatter.repo && <ViewOnGithub href={frontMatter.repo} />}
               <Component />
+              <GoBack align="right" text="Back to projects" />
             </Route>
           ))}
         </ProjectPageContainer>
