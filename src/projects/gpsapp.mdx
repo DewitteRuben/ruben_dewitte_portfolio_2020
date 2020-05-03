@@ -1,6 +1,103 @@
 ---
 title: GPS live tracker
 route: gpsapp
+repo: https://github.com/DewitteRuben/gpsapp
+thumb: https://i.imgur.com/Fkfjd9H.jpg
+yPosThumb: 70%
 ---
 
+import Lightbox from "../components/Lightbox/Lightbox";
+import LightboxCarousel from "../components/LightboxCarousel/LightboxCarousel";
+import MdLink from "../components/MdLink/MdLink";
+
+import { Small } from "../components/Layout/index";
+import webappStartTrack from "../images/projects/gpsapp/webapp-start-track.png";
+import webappTrackingExample from "../images/projects/gpsapp/webapp-track-example.png";
+import webappPeerToPeerCall from "../images/projects/gpsapp/webapp-peer-to-peer-call.png";
+
+import gpsappConcludeRoute from "../images/projects/gpsapp/gpsapp-conclude-route.jpg";
+import gpsappSaveRoute from "../images/projects/gpsapp/gpsapp-save-route.jpg";
+
+import gpsappSavedRoutes from "../images/projects/gpsapp/gpsapp-saved-routes.jpg";
+import gpsappEditRoute from "../images/projects/gpsapp/gpsapp-edit-route.jpg";
+import gpsappViewRoute from "../images/projects/gpsapp/gpsapp-view-route.jpg";
+
+
+import gpsappSettings from "../images/projects/gpsapp/gpsapp-settings.jpg";
+
+import gpsappSettingsWebRTC from "../images/projects/gpsapp/gpsapp-settings-webrtc.jpg";
+
+import gpsappConnectionRequest from "../images/projects/gpsapp/gpsapp-connection-request.jpg";
+
 # GPS live tracker
+
+## Introduction
+
+To familiarize myself more with interactive map integrations (Google Maps, Mapbox, etc..) and WebRTC in mobile applications, I decided on creating a GPS Tracker mobile app. 
+
+My GPS tracker app allows users to track their own location, create routes, share their location in realtime and make video calls. This could be used for example to track a traveling family member, to share a roadtrip with a friend or to record your own bike trip. 
+
+Users have the ability to share a passcode, that is unique to them, to the people they want to be tracked by. This passcode can in turn be used by others to track the tracker.
+
+## Tech stack
+
+* React Native with Redux (state management)
+* React Native WebRTC for peer to peer video and audio streaming
+* Firebase's Realtime Database for the transmission of location data
+* NodeJS Express with Socket.io for the STUN and TURN setup needed for WebRTC
+* Heroku to host the web app for this project
+* Typescript for both front and back-end
+
+## Functionality
+
+### Save, edit and view routes
+
+While tracking, after a minimum distance (default is 10 m) has been covered, users can conclude and save the current route. If they choose to save the route, they will be prompted to provide several details about the route.
+
+<LightboxCarousel width={300} images={[gpsappConcludeRoute, gpsappSaveRoute]} />
+
+Users can later view and edit their saved routes.
+
+<LightboxCarousel width={300} images={[gpsappSavedRoutes, gpsappEditRoute, gpsappViewRoute]} />
+
+<br/>
+<br/>
+
+### Sharing location
+
+When the mobile app is first started a random <MdLink href="https://www.npmjs.com/package/shortid">id</MdLink> is generated. This id is unique to the mobile app and can be reset by clearing the app's data.
+
+<Lightbox width={300} src={gpsappSettings} />
+
+This id can used to view the GPS location of the person concerned using the standalone <MdLink href="https://gpsapp-server.herokuapp.com/">web application</MdLink>.
+
+<Lightbox src={webappStartTrack} />
+
+
+When a valid id has been entered, the tracker's GPS location is shown on an interactive map.
+
+<Lightbox src={webappTrackingExample} />
+
+<br/>
+<br/>
+
+### Video call <Small>(max. 2 peers in latest version)</Small>
+
+When the WebRTC option is enabled on the settings menu, the tracker can then request a video call via the web application.
+
+<LightboxCarousel width={300} images={[gpsappSettingsWebRTC, gpsappConnectionRequest]} />
+
+WebRTC uses <MdLink href="https://en.wikipedia.org/wiki/STUN">STUN</MdLink> and/or <MdLink href="https://en.wikipedia.org/wiki/Traversal_Using_Relays_around_NAT">TURN</MdLink> servers to establish a peer to peer connection between users.
+
+<Lightbox src={webappPeerToPeerCall} />
+
+<br/>
+<br/>
+
+## Release
+
+The `apk` of the GPS Tracker mobile app can be downloaded <MdLink href="https://we.tl/t-4pAmixArGg">here</MdLink>.
+
+Since I don't have a computer with macOS I was not able to build this project for iOS. However, if needed, the app can be built for iOS using the source code on <MdLink href={frontMatter.repo}>Github</MdLink>.
+
+If you wish to track another user's location, the GPS Tracker webapp is hosted on <MdLink href="https://gpsapp-server.herokuapp.com/">Heroku</MdLink>.
