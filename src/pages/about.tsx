@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { BackgroundContainer, Card, ContentContainer, PageTitle } from "../components/Layout";
 import me from "../images/me.png";
+import MdLink from "../components/MdLink/MdLink";
 
 const Article = styled.article`
   text-align: justify;
@@ -44,12 +45,9 @@ const About: React.FC = () => {
               entertained with everything JavaScript related.
             </p>
             <p>
-              In 2019 at the University of West-Flanders{" "}
-              <a href="https://www.howest.be/en" rel="noopener noreferrer" target="_blank">
-                Howest
-              </a>{" "}
-              (Belgium) I obtained my Bachelor&apos;s degree. Other than my degree I currently have one year of professional
-              experience as a developer.
+              In 2019, I obtained my Bachelor&apos;s degree at the University of West-Flanders in Belgium (
+              <MdLink href="https://www.howest.be/en">Howest</MdLink>). Other than my degree I currently have one year of
+              professional experience as a developer.
             </p>
             <p>As of now I&apos;m looking for opportunities in and around the Rhein-Main area as a web developer.</p>
           </Article>
