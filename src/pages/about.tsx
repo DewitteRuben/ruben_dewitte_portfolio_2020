@@ -51,7 +51,7 @@ const About: React.FC = () => {
               (Belgium) I obtained my Bachelor&apos;s degree. Other than my degree I currently have one year of professional
               experience as a developer.
             </p>
-            <p>As of now I&apos;m looking for opportunities in and around the Rhein-Main area as a Front-end developer.</p>
+            <p>As of now I&apos;m looking for opportunities in and around the Rhein-Main area as a web developer.</p>
           </Article>
         </Card>
       </ContentContainer>
