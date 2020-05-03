@@ -1,18 +1,23 @@
 import React from "react";
 import { ContentContainer, PageTitle, BackgroundContainer } from "../components/Layout";
 import styled from "styled-components";
-import { rem } from "polished";
+import { rem, em } from "polished";
 import { Route, useRouteMatch, useHistory } from "react-router-dom";
 
 /* eslint import/no-webpack-loader-syntax: off */
 /* eslint-disable import/no-unresolved */
 import Decoworld, { frontMatter as decoFrontMatter } from "!babel-loader!mdx-loader!../projects/decoapp.mdx";
+import GpsApp, { frontMatter as gpsFrontMatter } from "!babel-loader!mdx-loader!../projects/gpsapp.mdx";
 import ViewOnGithub from "../components/ViewOnGithub/ViewOnGithub";
 
-const projects = [{ Component: Decoworld, frontMatter: decoFrontMatter }];
+const projects = [
+  { Component: Decoworld, frontMatter: decoFrontMatter },
+  { Component: GpsApp, frontMatter: gpsFrontMatter },
+];
 
 interface IProjectItemContainerProps {
   bgURL?: string;
+  yPos?: number | string;
 }
 
 const ProjectItemContainer = styled.div`
@@ -22,26 +27,26 @@ const ProjectItemContainer = styled.div`
 `;
 
 const ProjectItemImage = styled.div<IProjectItemContainerProps>`
-  width: 100%;
-  height: 260px;
-  background-repeat: no-repeat;
-  background-size: auto 200%;
-  background-position-x: center;
-  background-position-y: 55px;
-  height: 20em;
-  transition: all 0.2s ease, background-position 0ms;
-
   filter: blur(3px);
+  
+  width: 100%;
+  height: 20em;
   opacity: 0.8;
 
-  background-image: url(${(props) => (props.bgURL ? props.bgURL : "")});
+  transition: all 0.2s ease, background-position 0ms;
 
+  background-image: url(${(props) => (props.bgURL ? props.bgURL : "")});
+  background-repeat: no-repeat;
+  background-size: auto 212%;
+  background-position-x: center;
+  background-position-y: ${(props) => (props.yPos ? props.yPos : em(55))}};
+  
   &:hover {
     cursor: pointer;
     filter: none;
-    background-size: auto 210%;
+    background-size: auto 222%;
     opacity: 1;
-  }
+  }  
 `;
 
 const ProjectPageContainer = styled.div`
@@ -64,9 +69,10 @@ interface IProjectItem {
   title: string;
   route: string;
   background?: string;
+  yPos?: number | string;
 }
 
-const ProjectItem: React.FC<IProjectItem> = ({ title, route, background }) => {
+const ProjectItem: React.FC<IProjectItem> = ({ title, route, background, yPos }) => {
   const history = useHistory();
 
   const handleOnClick = () => {
@@ -76,7 +82,7 @@ const ProjectItem: React.FC<IProjectItem> = ({ title, route, background }) => {
   return (
     <ProjectItemContainer>
       <ProjectItemTitle>{title}</ProjectItemTitle>
-      <ProjectItemImage bgURL={background} onClick={handleOnClick} />
+      <ProjectItemImage yPos={yPos} bgURL={background} onClick={handleOnClick} />
     </ProjectItemContainer>
   );
 };
@@ -93,6 +99,7 @@ const Projects: React.FC = () => {
             <ProjectItem
               key={frontMatter.route}
               route={`${match.url}/${frontMatter.route}`}
+              yPos={frontMatter.yPosThumb}
               background={frontMatter.thumb}
               title={frontMatter.title}
             />
