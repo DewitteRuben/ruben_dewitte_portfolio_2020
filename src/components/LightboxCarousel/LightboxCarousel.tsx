@@ -3,18 +3,24 @@ import Lightbox, { LightboxThumbnail } from "../Lightbox/Lightbox";
 import styled from "styled-components";
 import { em } from "polished";
 
+export interface ILightboxImage {
+  src: string;
+  width?: number;
+}
+
 interface ILightboxCarouselProps {
-  images: string[];
+  images: (string | ILightboxImage)[];
   width?: number;
 }
 
 const LightboxCarouselContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(${em(250)}, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(${em(300)}, 1fr));
+  justify-items: center;
   grid-gap: ${em(10)};
 `;
 
-const LightboxCarousel: React.FC<ILightboxCarouselProps> = ({ images, width }) => {
+const LightboxCarousel: React.FC<ILightboxCarouselProps> = ({ images, width: allImagesWidth }) => {
   const [currentIndex, setIndex] = React.useState(0);
   const [isVisible, setVisibility] = React.useState(false);
 
@@ -33,24 +39,6 @@ const LightboxCarousel: React.FC<ILightboxCarouselProps> = ({ images, width }) =
     }
   }, [hasRightArrow]);
 
-  React.useEffect(() => {
-    const handleKeyPress = (ev: KeyboardEvent) => {
-      const key = ev.key;
-      if (key === "Escape" && isVisible) {
-        return setVisibility(false);
-      }
-      if (key === "ArrowLeft") {
-        return goLeft();
-      }
-      if (key === "ArrowRight") {
-        return goRight();
-      }
-    };
-    document.addEventListener("keydown", handleKeyPress);
-
-    return () => document.removeEventListener("keydown", handleKeyPress);
-  }, [goLeft, goRight, isVisible]);
-
   const onThumbClick = (index: number) => () => {
     setIndex(index);
     setVisibility(true);
@@ -60,16 +48,23 @@ const LightboxCarousel: React.FC<ILightboxCarouselProps> = ({ images, width }) =
     setVisibility(false);
   };
 
+  const getCurrentImage = () => {
+    const currentImage = images[currentIndex];
+    return typeof currentImage === "string" ? currentImage : currentImage.src;
+  };
+
   return (
     <LightboxCarouselContainer>
-      {images.map((src: string, index: number) => (
-        <LightboxThumbnail width={width} onClick={onThumbClick(index)} key={src} src={src} />
-      ))}
+      {images.map((item: string | ILightboxImage, index: number) => {
+        const src = typeof item === "string" ? item : item.src;
+        const width = typeof item === "string" ? allImagesWidth : item.width || allImagesWidth;
+        return <LightboxThumbnail width={width || allImagesWidth} onClick={onThumbClick(index)} key={src} src={src} />;
+      })}
       <Lightbox
         onClose={onLightboxClose}
         onArrowLeft={goLeft}
         onArrowRight={goRight}
-        src={images[currentIndex]}
+        src={getCurrentImage()}
         arrowLeft={hasLeftArrow}
         arrowRight={hasRightArrow}
         visible={isVisible}

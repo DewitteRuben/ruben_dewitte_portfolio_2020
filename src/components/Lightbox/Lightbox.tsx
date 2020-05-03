@@ -7,7 +7,7 @@ interface ILightboxThumbnailProps {
 }
 
 export const LightboxThumbnail = styled.img<ILightboxThumbnailProps>`
-  max-width: ${(props) => em(props.width ? props.width : 300)};
+  max-width: ${(props) => (props.width ? em(props.width) : "unset")};
   width: 100%;
   border: 1px solid ${(props) => props.theme.border};
 
@@ -145,6 +145,35 @@ const Lightbox: React.FC<ILightboxProps> = ({
 
   const [swipeAction, setSwipeAction] = React.useState<{ action: "left" | "right" | "reset" }>();
 
+  const handleOnClose = React.useCallback(() => {
+    if (onClose) {
+      onClose();
+    }
+    setIsHidden(true);
+  }, [onClose]);
+
+  const handleOnThumbnailClick = () => {
+    setIsHidden(false);
+  };
+
+  React.useEffect(() => {
+    const handleKeyPress = (ev: KeyboardEvent) => {
+      const key = ev.key;
+      if (key === "Escape" && !hidden) {
+        return handleOnClose();
+      }
+      if (key === "ArrowLeft" && arrowLeft && onArrowLeft) {
+        return onArrowLeft();
+      }
+      if (key === "ArrowRight" && arrowRight && onArrowRight) {
+        return onArrowRight();
+      }
+    };
+    document.addEventListener("keydown", handleKeyPress);
+
+    return () => document.removeEventListener("keydown", handleKeyPress);
+  }, [arrowLeft, arrowRight, handleOnClose, hidden, onArrowLeft, onArrowRight]);
+
   React.useEffect(() => {
     const swipe = swipeAction?.action;
     setAnimation(true);
@@ -207,23 +236,12 @@ const Lightbox: React.FC<ILightboxProps> = ({
     };
   }, [startTouch, xOffset]);
 
-  const handleOnClose = () => {
-    if (onClose) {
-      onClose();
-    }
-    setIsHidden(true);
-  };
-
-  const handleOnThumbnailClick = () => {
-    setIsHidden(false);
-  };
-
   React.useEffect(() => {
     setIsHidden(!visible);
   }, [visible]);
 
   return (
-    <>
+    <div>
       {showThumb && <LightboxThumbnail width={width} src={thumb || src} onClick={handleOnThumbnailClick} />}
       <LightboxBackdrop hide={hidden}>
         <LightboxContainer>
@@ -233,7 +251,7 @@ const Lightbox: React.FC<ILightboxProps> = ({
           <CloseButton onClick={handleOnClose}>&times;</CloseButton>
         </LightboxContainer>
       </LightboxBackdrop>
-    </>
+    </div>
   );
 };
 
