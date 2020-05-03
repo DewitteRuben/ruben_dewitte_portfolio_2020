@@ -18,6 +18,10 @@ const LightboxCarouselContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(${em(300)}, 1fr));
   justify-items: center;
   grid-gap: ${em(10)};
+
+  @media screen and (max-width: 320px) {
+    grid-template-columns: repeat(auto-fit, minmax(${em(250)}, 1fr));
+  }
 `;
 
 const LightboxCarousel: React.FC<ILightboxCarouselProps> = ({ images, width: allImagesWidth }) => {
@@ -50,7 +54,7 @@ const LightboxCarousel: React.FC<ILightboxCarouselProps> = ({ images, width: all
 
   const getCurrentImage = () => {
     const currentImage = images[currentIndex];
-    return typeof currentImage === "string" ? currentImage : currentImage.src;
+    return typeof currentImage === "string" ? currentImage : currentImage?.src;
   };
 
   return (
