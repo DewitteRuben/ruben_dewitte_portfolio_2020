@@ -9,6 +9,7 @@ import { Route, useRouteMatch, useHistory } from "react-router-dom";
 import Decoworld, { frontMatter as decoFrontMatter } from "!babel-loader!mdx-loader!../projects/decoapp.mdx";
 import GpsApp, { frontMatter as gpsFrontMatter } from "!babel-loader!mdx-loader!../projects/gpsapp.mdx";
 import MheApp, { frontMatter as mheFrontMatter } from "!babel-loader!mdx-loader!../projects/mheapp.mdx";
+import Portfolio, { frontMatter as portFrontMatter } from "!babel-loader!mdx-loader!../projects/portfolio.mdx";
 
 import ViewOnGithub from "../components/ViewOnGithub/ViewOnGithub";
 import GoBack from "../components/GoBack/GoBack";
@@ -17,6 +18,7 @@ const projects = [
   { Component: Decoworld, frontMatter: decoFrontMatter },
   { Component: GpsApp, frontMatter: gpsFrontMatter },
   { Component: MheApp, frontMatter: mheFrontMatter },
+  { Component: Portfolio, frontMatter: portFrontMatter },
 ];
 
 interface IProjectItemContainerProps {
