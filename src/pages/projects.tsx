@@ -1,7 +1,7 @@
 import React from "react";
 import { ContentContainer, PageTitle, BackgroundContainer } from "../components/Layout";
 import styled from "styled-components";
-import { rem, em } from "polished";
+import { rem } from "polished";
 import { Route, useRouteMatch, useHistory } from "react-router-dom";
 
 /* eslint import/no-webpack-loader-syntax: off */
