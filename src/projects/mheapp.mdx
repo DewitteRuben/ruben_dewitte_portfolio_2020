@@ -1,0 +1,101 @@
+---
+title: Mood Tracker
+route: mheapp
+repo: https://github.com/DewitteRuben/react_native_mental_health_app_2020
+thumb: https://i.imgur.com/dZxueQl.png
+yPosThumb: 13%
+---
+
+import MdLink from "../components/MdLink/MdLink";
+import Lightbox from "../components/Lightbox/Lightbox";
+import LightboxCarousel from "../components/LightboxCarousel/LightboxCarousel";
+
+import appAddEntry from "../images/projects/mheapp/add-entry.jpg";
+import appAddExperience from "../images/projects/mheapp/add-experience.jpg";
+import appViewEntries from "../images/projects/mheapp/view-entries.jpg";
+import appEntryDetails from "../images/projects/mheapp/entry-details.jpg";
+import appQRCode from "../images/projects/mheapp/qrcode-scan.jpg";
+import appStartup from "../images/projects/mheapp/entry-page.jpg";
+
+import portalDashboard from "../images/projects/mheapp/dashboard.png";
+import portalData from "../images/projects/mheapp/data.png";
+
+import portalLogin from "../images/projects/mheapp/login.png";
+import portalRegister from "../images/projects/mheapp/register.png";
+import portalLinkClient from "../images/projects/mheapp/link-client.png";
+import portalClientInfo from "../images/projects/mheapp/client-info.png";
+
+
+## Mood Tracker
+
+# Introduction
+
+As part of my bachelor thesis, I developed a proof of concept of a system that could aid mental health professionals with the follow-up of their clients.
+The system consists out of two applications, a mobile application to be used by the clients, and a web portal to be used by the mental health professionals.
+
+The mobile application would be responsible for the tracking of the client's data, such as their mood, how the feel (their emotions), their experiences, etc.
+Whereas the web portal would allow mental health professionals to keep track of, view and analyse their client's data to help them better understand their client's.
+
+Currently the prototypes I created for my thesis are being reworked from scratch into a fully functioning system. (WIP)
+
+## Tech stack
+
+* <MdLink href="https://reactnative.dev/">ReactJS</MdLink> with <MdLink href="https://redux.js.org/">Redux</MdLink> (state management)
+* <MdLink href="https://reactnative.dev/">React Native</MdLink> using <MdLink href="https://expo.io/">Expo</MdLink> with <MdLink href="https://redux.js.org/">Redux + Redux Saga</MdLink> as state management
+* <MdLink href="https://www.mongodb.com/">MongoDb</MdLink> with <MdLink href="https://mongoosejs.com/">Mongoose</MdLink> on top
+* <MdLink href="https://www.docker.com/">Docker</MdLink>ized <MdLink href="https://nodejs.org/en/">Node.js</MdLink> <MdLink href="https://expressjs.com/">Express</MdLink> API for both web and mobile applications
+* <MdLink href="https://material-ui.com/">React Material UI</MdLink> Component framework for design + styling
+* <MdLink href="https://www.typescriptlang.org/">Typescript</MdLink> for both front and back-end
+
+## Mobile application
+
+### Authentication
+
+On startup clients are requested to link with their mental health professional. The mental health professional can register an account for the client and pass along the ID that is needed to proceed.
+
+<LightboxCarousel width={300} images={[appStartup, appQRCode]} />
+
+
+### Create and view mood entries (Offline first)
+
+Clients are advised to create a data entry that includes their mood, emotions, experiences, etc. daily.
+These entries are first stored locally, and are later synced whenever internet is available.
+
+<LightboxCarousel width={300} images={[appViewEntries, appAddEntry, appEntryDetails]} />
+
+
+## Web portal
+
+### Authentication
+
+Mental health professionals are free to create a new account.
+
+<Lightbox src={portalLogin} />
+
+<Lightbox src={portalRegister} />
+
+### Linking with clients
+
+Mental health professionals can add or remove new clients whenever they want to.
+
+<Lightbox src={portalDashboard} />
+
+<Lightbox src={portalLinkClient} />
+
+Whenever a client is registered a unique ID is generated for that client, this ID can in turn be used as a means of authentication for the client.
+This ID is shared, for ease of use, via a QR code.
+
+<Lightbox src={portalClientInfo} />
+
+### View client information and data
+
+Mental health professionals can then analyse the data submitted by their clients.
+
+<Lightbox src={portalData} />
+
+
+## Source code
+
+* The ReactNative frontend (Mobile app) of this project can be found <MdLink href={frontMatter.repo}>here</MdLink>.
+* The ReactJS frontend (Web portal) of this project can be found <MdLink href="https://github.com/DewitteRuben/reactjs_mental_health_portal">here</MdLink>.
+* The NodeJS backend (API) of this project can be found <MdLink href="https://github.com/DewitteRuben/backend_nodejs_ts_mental_health_app_2020">here</MdLink>.
