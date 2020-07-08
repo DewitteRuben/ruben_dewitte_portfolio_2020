@@ -1,9 +1,14 @@
-import { createGlobalStyle } from "styled-components";
 import { rem } from "polished";
+import { createGlobalStyle } from "styled-components";
 import { normalize } from "./normalize";
 
 const GlobalStyles = createGlobalStyle`
   ${normalize}
+
+  @font-face {
+    font-family: "Circular Std";
+    src: local("Circular Std"), url("./../fonts/Circular Std Medium.ttf") format('truetype');
+  }
 
   :focus {
     box-shadow: none;
@@ -15,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   * {
-    font-family: CircularStd, Arial, Helvetica, sans-serif;
+    font-family: "Circular Std", Arial, Helvetica, sans-serif;
   }
 
   html,
