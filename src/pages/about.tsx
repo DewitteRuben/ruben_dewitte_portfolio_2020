@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { BackgroundContainer, Card, ContentContainer, PageTitle } from "../components/Layout";
-import me from "../images/me.png";
 import MdLink from "../components/MdLink/MdLink";
+import me from "../images/me.png";
 
 const Article = styled.article`
   text-align: justify;
@@ -46,10 +46,13 @@ const About: React.FC = () => {
             </p>
             <p>
               In 2019, I obtained my Bachelor&apos;s degree at the University of West-Flanders in Belgium (
-              <MdLink href="https://www.howest.be/en">Howest</MdLink>). Other than my degree I currently have one year of
+              <MdLink href="https://www.howest.be/en">Howest</MdLink>). Other than my degree I currently have two years of
               professional experience as a developer.
             </p>
-            <p>As of now I&apos;m looking for opportunities in and around the Rhein-Main area as a web developer.</p>
+            <p>
+              As of now I&apos;m currently employed as a web developer for the startup{" "}
+              <MdLink href="https://www.record-evolution.de/en">Record Evolution</MdLink> in Frankfurt.
+            </p>
           </Article>
         </Card>
       </ContentContainer>

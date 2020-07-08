@@ -1,10 +1,11 @@
+import { em, rem } from "polished";
 import React from "react";
-import { ContentContainer, PageTitle, Spacer, BackgroundContainer, Card } from "../components/Layout";
 import styled from "styled-components";
-import { rem, em } from "polished";
+import { BackgroundContainer, Card, ContentContainer, PageTitle, Spacer } from "../components/Layout";
 import { ReactComponent as AdagioLogo } from "../images/adagio.svg";
-import StudioHyperdriveLogo from "../images/studio-hyperdrive.jpg";
 import HowestLogo from "../images/howest.png";
+import { ReactComponent as RecordEvolutionLogo } from "../images/record-evolution.svg";
+import StudioHyperdriveLogo from "../images/studio-hyperdrive.jpg";
 
 const ExperienceItem = styled(Card)`
   position: relative;
@@ -71,6 +72,43 @@ const Experience = () => {
         <PageTitle>Experience</PageTitle>
         <ExperienceItem>
           <ImageContainer>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.record-evolution.de/en">
+              <RecordEvolutionLogo />
+            </a>
+          </ImageContainer>
+          <TitleBlock>Web developer</TitleBlock>
+          <DataList>
+            <li>
+              <i>Record Evolution</i>
+            </li>
+            <li>Aug. 2020 &ndash; now</li>
+          </DataList>
+          <Spacer />
+          <Spacer />
+          <ListTitle>Tech stack</ListTitle>
+          <DataList>
+            <li>Vue.js, Polymer, lit-element, Node.js, Python, Electron</li>
+          </DataList>
+          <Spacer />
+          <Spacer />
+          <ListTitle>Role</ListTitle>
+          <DataList>
+            <li>Maintaining existing products, e.g.: Reswarm and Repods</li>
+          </DataList>
+          <Spacer />
+          <ListTitle>Website</ListTitle>
+          <DataList>
+            <li>
+              <StyledLink rel="noopener noreferrer" href="https://www.record-evolution.de/en" target="_blank">
+                https://www.record-evolution.de/en
+              </StyledLink>
+            </li>
+          </DataList>
+        </ExperienceItem>
+        <Spacer />
+        <Spacer />
+        <ExperienceItem>
+          <ImageContainer>
             <a target="_blank" rel="noopener noreferrer" href="https://adagio.company/">
               <AdagioLogo />
             </a>
@@ -80,7 +118,7 @@ const Experience = () => {
             <li>
               <i>Adagio</i>
             </li>
-            <li>Sep. 2019 &ndash; Now</li>
+            <li>Sep. 2019 &ndash; Aug. 2020</li>
           </DataList>
           <Spacer />
           <Spacer />
@@ -122,7 +160,7 @@ const Experience = () => {
             <li>
               <i>Studio Hyperdrive</i>
             </li>
-            <li>Feb. 2019 &ndash; May. 2019</li>
+            <li>Feb. 2019 &ndash; May 2019</li>
           </DataList>
           <Spacer />
           <ListTitle>Tech stack</ListTitle>
