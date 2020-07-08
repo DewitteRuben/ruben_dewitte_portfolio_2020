@@ -93,7 +93,7 @@ const Experience = () => {
           <Spacer />
           <ListTitle>Role</ListTitle>
           <DataList>
-            <li>Maintaining existing products, e.g.: Reswarm and Repods</li>
+            <li>Maintaining existing services, e.g.: Reswarm and Repods</li>
           </DataList>
           <Spacer />
           <ListTitle>Website</ListTitle>
