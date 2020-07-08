@@ -9,6 +9,18 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Circular Std";
     src: local("Circular Std"), url("./../fonts/Circular Std Medium.ttf") format('truetype');
   }
+  @font-face {
+    font-family: "Circular Std";
+    src: local("Circular Std"), url("./../fonts/Circular Std Black.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Circular Std";
+    src: local("Circular Std"), url("./../fonts/Circular Std Bold.ttf") format('truetype');
+  }
+  @font-face {
+    font-family: "Circular Std";
+    src: local("Circular Std"), url("./../fonts/Circular Std Book.ttf") format('truetype');
+  }
 
   :focus {
     box-shadow: none;
